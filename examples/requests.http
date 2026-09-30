@@ -1,0 +1,14 @@
+### Create an order
+POST http://localhost:8080/api/orders
+Content-Type: application/json
+
+{
+  "subtotalCents": 12000,
+  "customerTier": "PREMIUM",
+  "firstPurchase": true,
+  "couponCode": "SAVE10",
+  "deliveryMethod": "STANDARD"
+}
+
+### Replace 1 with the id returned above
+GET http://localhost:8080/api/orders/1
