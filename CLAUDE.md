@@ -60,4 +60,6 @@ Two project skills are available (defined in `.claude/skills/`):
 - `/salud-de-suite` — verifies suite health (flakiness, baseline time) before mutation testing.
 - `/caza-de-mutantes` — runs PIT, normalizes results, and triages survivors. **Always run `/salud-de-suite` first.**
 
+`.github/skills/` holds generated GitHub Copilot copies of these skills (script/reference paths rewritten to be repo-root-relative). Never edit them by hand: after changing `.claude/skills/`, run `python3 tools/install_copilot_skills.py` (`--check` fails if they drifted; `--user` installs to `~/.copilot/skills`).
+
 Example requests are in `examples/requests.http`.
